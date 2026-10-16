@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: jacobus-nagel-cv-production
+  group: jakes-production
   cancel-in-progress: false
 
 jobs:

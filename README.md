@@ -95,7 +95,7 @@ The configuration uses Cloudflare static assets and is designed to stay within t
    npx wrangler deploy
    ```
 
-The Worker name in `wrangler.jsonc` is `jacobus-nagel-cv`. Cloudflare will show the final `workers.dev` URL after deployment.
+The Worker name in `wrangler.jsonc` is `jakes`. Cloudflare will show the final `workers.dev` URL after deployment.
 
 ## Optional custom domain
 
