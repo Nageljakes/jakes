@@ -533,6 +533,27 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 .receipt-note p { font-size: .92rem; color: var(--muted); }
 
+/* ── Reviews: customers in their own words ──── */
+.reviews {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
+  gap: .9rem; margin-top: 2.4rem;
+}
+.review {
+  border: 2px solid var(--line); border-radius: var(--r-lg);
+  padding: 1.3rem 1.25rem; background: var(--surface);
+  display: flex; flex-direction: column; gap: .6rem; margin: 0; min-width: 0;
+  transition: border-color .22s var(--ease), transform .22s var(--ease), box-shadow .22s var(--ease);
+}
+.review:hover { border-color: var(--amber); transform: translate(-3px, -3px); box-shadow: var(--hard-amber); }
+.stars { color: var(--amber); letter-spacing: .15em; font-size: .95rem; }
+.review blockquote { font-size: .9rem; color: var(--muted); line-height: 1.55; }
+.review figcaption { margin-top: auto; }
+.review figcaption b { display: block; font-size: .95rem; }
+.review figcaption span { font-family: var(--font-mono); font-size: .68rem; color: var(--muted-dim); letter-spacing: .04em; }
+.reviews-note { margin-top: 1.4rem; font-size: .9rem; color: var(--muted); }
+.reviews-note a { color: var(--teal); border-bottom: 1px solid rgba(53,198,216,.4); }
+.reviews-note a:hover { color: var(--text); border-bottom-color: var(--text); }
+
 /* ── The working loop ─────────────────────────────────
    Four steps drawn as a cycle rather than a list, because the point is
    that it goes back round — the same reason the Jaxtech agent loop is
@@ -661,6 +682,11 @@ h4 { font-size: 1rem; font-weight: 600; }
 .track li strong { display: block; font-size: 1rem; }
 .track li p { font-size: .87rem; color: var(--muted); line-height: 1.5; }
 .track.ai li i { color: var(--teal); }
+.tracks-note {
+  margin-top: 1.1rem; font-family: var(--font-mono); font-size: .76rem;
+  letter-spacing: .04em; color: var(--muted-dim); text-align: center;
+}
+.tracks-note strong { color: var(--muted); font-weight: 600; }
 
 /* ── Education & training ─────────────────────────── */
 .creds { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: .9rem; margin-top: 2.4rem; }
@@ -786,14 +812,14 @@ h4 { font-size: 1rem; font-weight: 600; }
   .hero-grid, .split { display: block; }
   /* Two columns rather than one long stack — it saves several sheets of
      paper without making anything harder to read at this size. */
-  .cards, .receipts, .creds, .tracks { grid-template-columns: 1fr 1fr; gap: 6pt; }
-  .console, .panel, .card, .receipt, .track, .cred, .tl-body, .earlier, .endcta,
+  .cards, .receipts, .reviews, .creds, .tracks { grid-template-columns: 1fr 1fr; gap: 6pt; }
+  .console, .panel, .card, .receipt, .review, .track, .cred, .tl-body, .earlier, .endcta,
   .loop-node, .loop-core, .showcase, .tinycard {
     border: .75pt solid #999 !important; box-shadow: none !important; background: #fff !important;
     backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
     page-break-inside: avoid; transform: none !important;
   }
-  .card, .receipt, .cred, .track { margin-bottom: 6pt; }
+  .card, .receipt, .review, .cred, .track { margin-bottom: 6pt; }
   .console { margin-top: 10pt; }
   .cc-stats { display: flex; }
   .cc-stat b { font-size: 13pt; }

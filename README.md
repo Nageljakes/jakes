@@ -29,9 +29,12 @@ Beyond the usual CV sections it carries a few things worth knowing about:
 public/
 ├── index.html
 ├── styles.css
-└── script.js
-wrangler.jsonc
+├── script.js
+└── assets/
+    ├── Jacobus-Nagel-CV.pdf   # downloadable CV, linked from hero + contact
+    └── *.jpg|png              # imagery
 ```
+wrangler.jsonc
 
 ## Preview locally
 
